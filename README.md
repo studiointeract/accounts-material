@@ -11,6 +11,10 @@ Current version 1.0.0
 5. **Unstyled** is the default, no CSS included.
 4. **No password** sign up and sign in are included.
 
+### Based on and extends studiointeract:react-accounts-ui
+
+[https://atmospherejs.com/studiointeract/react-accounts-ui](https://atmospherejs.com/studiointeract/react-accounts-ui)
+
 ## Installation
 
 ### Meteor 1.3
