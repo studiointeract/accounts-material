@@ -3,11 +3,12 @@
   border: solid 3px #de4f4f;
   background: white;
   margin: 16px;
+  max-width: 500px;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   .field-group {
     label {
       display: block;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: bold;
       text-transform: uppercase;
       padding: 0 0 8px;
@@ -32,6 +33,10 @@
     padding: 16px;
     font-size: 16px;
     cursor: pointer;
+    &.forgot-password {
+      padding-top: 8px;
+      padding-bottom: 24px;
+    }
   }
   button {
     background: #de4f4f;

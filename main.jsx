@@ -16,7 +16,8 @@ class Form extends Accounts.ui.Form {
       <form className={ready ? "ready" : null} onSubmit={ evt => evt.preventDefault() } className="accounts-ui">
         <Accounts.ui.Fields fields={ fields } />
         { buttons['switchToPasswordReset'] ? (
-          <Accounts.ui.Button {...buttons['switchToPasswordReset']} />
+          <Accounts.ui.Button
+            className="forgot-password" {...buttons['switchToPasswordReset']} />
         ): null }
         <Accounts.ui.Buttons buttons={ _.omit(buttons, 'switchToPasswordReset') } />
         <Accounts.ui.FormMessage message={ message } />
