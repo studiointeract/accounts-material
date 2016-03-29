@@ -2,7 +2,7 @@ Package.describe({
   name: 'studiointeract:react-accounts-ui-basic',
   version: '1.0.0',
   summary: 'Basic – Accounts UI for React in Meteor 1.3',
-  git: 'https://github.com/author/react-accounts-ui-bootstrap',
+  git: 'https://github.com/author/react-accounts-ui-basic',
   documentation: 'README.md'
 });
 
