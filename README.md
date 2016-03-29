@@ -2,6 +2,8 @@
 
 Current version 1.0.1
 
+![React Accounts UI for Meteor 1.3 - Basic](https://raw.githubusercontent.com/studiointeract/react-accounts-ui-basic/master/react-accounts-ui-basic.gif)
+
 ## Features
 
 1. **Easy to use**, mixing the ideas of useraccounts configuration and accounts-ui that everyone already knows and loves.
@@ -10,6 +12,10 @@ Current version 1.0.1
 4. **Basic routing** included.
 5. **Unstyled** is the default, no CSS included.
 4. **No password** sign up and sign in are included.
+
+### Based on and extends studiointeract:react-accounts-ui
+
+[https://atmospherejs.com/studiointeract/react-accounts-ui](https://atmospherejs.com/studiointeract/react-accounts-ui)
 
 ## Installation
 
