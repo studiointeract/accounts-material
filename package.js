@@ -10,12 +10,13 @@ Package.onUse(function(api) {
   api.versionsFrom('1.3');
   api.use('ecmascript');
   api.use('underscore');
-  api.use('studiointeract:react-accounts-ui@1.0.1');
+  api.use('fourseven:scss');
+  api.use('studiointeract:react-accounts-ui@1.0.2');
 
   api.imply('session');
 
   api.addFiles([
-    'styles.css'
+    'styles.scss'
   ], 'client');
 
   api.mainModule('main.jsx');

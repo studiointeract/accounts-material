@@ -15,7 +15,10 @@ class Form extends Accounts.ui.Form {
     return (
       <form className={ready ? "ready" : null} onSubmit={ evt => evt.preventDefault() } className="accounts-ui">
         <Accounts.ui.Fields fields={ fields } />
-        <Accounts.ui.Buttons buttons={ buttons } />
+        { buttons['switchToPasswordReset'] ? (
+          <Accounts.ui.Button {...buttons['switchToPasswordReset']} />
+        ): null }
+        <Accounts.ui.Buttons buttons={ _.omit(buttons, 'switchToPasswordReset') } />
         <Accounts.ui.FormMessage message={ message } />
       </form>
     );
@@ -25,7 +28,24 @@ class Form extends Accounts.ui.Form {
 class Buttons extends Accounts.ui.Buttons {}
 class Button extends Accounts.ui.Button {}
 class Fields extends Accounts.ui.Fields {}
-class Field extends Accounts.ui.Field {}
+class Field extends Accounts.ui.Field {
+  render() {
+    const { id, hint, label, type = 'text', onChange } = this.props;
+    return (
+      <div className="field-group">
+        <label htmlFor={ id }>{ label }</label>
+        <div className="field">
+          <input id={ id } 
+            type={ type }
+            autoCapitalize={ type == 'email' ? 'none' : false }
+            autoCorrect="off"
+            onChange={ onChange }
+            placeholder={ hint } defaultValue="" />
+        </div>
+      </div>
+    );
+  }
+}
 class FormMessage extends Accounts.ui.FormMessage {}
 // Notice! Accounts.ui.LoginForm manages all state logic at the moment, so avoid
 // overwriting this one, but have a look at it and learn how it works. And pull

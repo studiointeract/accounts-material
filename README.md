@@ -17,6 +17,35 @@ Current version 1.0.0
 
 `meteor add studiointeract:react-accounts-ui-basic`
 
+## Example setup using FlowRouter (Meteor 1.3)
+
+`meteor add accounts-password`  
+`meteor add studiointeract:react-accounts-ui-basic`  
+`meteor add kadira:flow-router-ssr`
+
+```javascript
+
+import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
+import { Accounts } from 'meteor/studiointeract:react-accounts-ui';
+import React from 'react';
+
+Accounts.ui.config({
+  passwordSignupFields: 'NO_PASSWORD',
+  loginPath: '/login',
+  onSignedInHook: () => FlowRouter.go('/'),
+  onSignedOutHook: () => FlowRouter.go('/')
+});
+
+FlowRouter.route("/login", {
+  action(params) {
+    mount(MainLayout, {
+      content: <Accounts.ui.LoginForm />
+    });
+  }
+});
+
+```
+
 ## Credits
 
 Thx to the Folks at [Studio Interact](http://studiointeract.se)
