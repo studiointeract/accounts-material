@@ -16,3 +16,7 @@ Current version 1.0.0
 ### Meteor 1.3
 
 `meteor add studiointeract:react-accounts-ui-basic`
+
+## Credits
+
+Thx to the Folks at [Studio Interact](http://studiointeract.se)
