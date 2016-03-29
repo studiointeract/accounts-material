@@ -52,7 +52,7 @@ softwarerero:accounts-t9n@0.0.20
 spacebars@1.0.9
 spacebars-compiler@1.0.9
 studiointeract:react-accounts-ui@1.0.5
-studiointeract:react-accounts-ui-basic@1.0.0
+studiointeract:react-accounts-ui-basic@1.0.1
 tracker@1.0.11
 ui@1.0.9
 underscore@1.0.6
