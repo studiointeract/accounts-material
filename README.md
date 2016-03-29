@@ -32,7 +32,7 @@ Current version 1.0.3
 ```javascript
 
 import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
-import { Accounts } from 'meteor/studiointeract:react-accounts-ui';
+import { Accounts } from 'meteor/studiointeract:react-accounts-ui-basic';
 import React from 'react';
 
 Accounts.ui.config({
