@@ -51,6 +51,9 @@
     &[type="submit"] {
       background: #de4f4f;
     }
+    &[disabled] {
+      opacity: 0.5;
+    }
   }
   .message {
     padding: 16px;
