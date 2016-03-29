@@ -10,7 +10,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.3');
   api.use('ecmascript');
   api.use('underscore');
-  api.use('fourseven:scss');
+  api.use('fourseven:scss@0.9.6');
   api.use('studiointeract:react-accounts-ui@1.0.2');
 
   api.imply('session');
