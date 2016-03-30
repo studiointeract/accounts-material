@@ -25,7 +25,7 @@ Current version 1.0.6
 
 ## Example setup using FlowRouter (Meteor 1.3)
 
-`meteor add accounts-password`
+`meteor add accounts-password`  
 `meteor add kadira:flow-router-ssr`
 
 ```javascript
