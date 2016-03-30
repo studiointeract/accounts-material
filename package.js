@@ -1,6 +1,6 @@
 Package.describe({
   name: 'studiointeract:react-accounts-ui-basic',
-  version: '1.0.4',
+  version: '1.0.6',
   summary: 'Basic – Accounts UI for React in Meteor 1.3',
   git: 'https://github.com/studiointeract/react-accounts-ui-basic',
   documentation: 'README.md'
@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use('underscore');
   api.use('fourseven:scss@3.4.1');
-  api.use('studiointeract:react-accounts-ui@1.0.8');
+  api.use('studiointeract:react-accounts-ui@1.0.11');
 
   api.imply('session');
 
