@@ -32,7 +32,7 @@ Current version 1.0.6
 ```javascript
 
 import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
-import { Accounts } from 'meteor/studiointeract:react-accounts-ui';
+import { Accounts } from 'meteor/studiointeract:react-accounts-ui-basic';
 import React from 'react';
 
 Accounts.ui.config({
@@ -54,4 +54,4 @@ FlowRouter.route("/login", {
 
 ## Credits
 
-Thx to the Folks at [Studio Interact](http://studiointeract.se)
+Made by the [creative folks at Studio Interact](http://studiointeract.com)
