@@ -11,40 +11,102 @@ import Accounts from 'meteor/studiointeract:react-accounts-ui';
  */
 class Form extends Accounts.ui.Form {
   render() {
-    const { fields, buttons, error, message, ready = true} = this.props;
+    const { fields, buttons, error, message, ready } = this.props;
     return (
-      <form className={ready ? "ready" : null} onSubmit={ evt => evt.preventDefault() } className="accounts-ui">
-        <Accounts.ui.Fields fields={ fields } />
-        { buttons['switchToPasswordReset'] ? (
-          <Accounts.ui.Button
-            className="forgot-password" {...buttons['switchToPasswordReset']} />
+      <form className={[
+        "ui form",
+        ready ? "" : "loading"
+      ].join(' ')} onSubmit={ evt => evt.preventDefault() }>
+        {Object.keys(fields).length > 0 ? (
+          <Accounts.ui.Fields fields={ fields } />
         ): null }
-        <Accounts.ui.Buttons buttons={ _.omit(buttons, 'switchToPasswordReset') } />
-        <Accounts.ui.FormMessage message={ message } />
+        { buttons['switchToPasswordReset'] ? (
+          <div className="field">
+            <Accounts.ui.Button {...buttons['switchToPasswordReset']} />
+          </div>
+        ): null }
+        {_.values(_.omit(buttons, 'switchToPasswordReset', 'switchToSignIn',
+          'switchToSignUp', 'switchToChangePassword', 'switchToSignOut', 'signOut')).map((button, i) =>
+          <Button {...button} key={i} />
+        )}
+        { buttons['signOut'] ? (
+          <Button {...buttons['signOut']} type="submit" />
+        ): null }
+        { buttons['switchToSignIn'] ? (
+          <Button {...buttons['switchToSignIn']} type="button" />
+        ): null }
+        { buttons['switchToSignUp'] ? (
+          <Button {...buttons['switchToSignUp']} type="button" />
+        ): null }
+        { buttons['switchToChangePassword'] ? (
+          <Button {...buttons['switchToChangePassword']} type="button" />
+        ): null }
+        { buttons['switchToSignOut'] ? (
+          <Button {...buttons['switchToSignOut']} type="button" />
+        ): null }
+        <Accounts.ui.FormMessage className="ui message" style={{display: 'block'}} {...message} />
       </form>
     );
   }
 }
 
 class Buttons extends Accounts.ui.Buttons {}
-class Button extends Accounts.ui.Button {}
-class Fields extends Accounts.ui.Fields {}
+class Button extends Accounts.ui.Button {
+  render() {
+    const { label, type, disabled = false, onClick, className } = this.props;
+    return type == 'link' ? (
+      <a style={{cursor: 'pointer'}} className={ className } onClick={ onClick }>{ label }</a>
+    ) : (
+      <button className={ [
+          'ui button',
+          type == 'submit' ? 'primary' : '',
+          disabled ? 'disabled' : '',
+          className
+        ].join(' ') } type={ type } disabled={ disabled }
+        onClick={ onClick }>{ label }</button>
+    );
+  }
+}
+class Fields extends Accounts.ui.Fields {
+  render () {
+    let { fields = {}, className = "field" } = this.props;
+    return (
+      <div className={ className }>
+        {Object.keys(fields).map((id, i) =>
+          <Accounts.ui.Field {...fields[id]} key={i} />
+        )}
+      </div>
+    );
+  }
+}
 class Field extends Accounts.ui.Field {
   render() {
-    const { id, hint, label, type = 'text', onChange } = this.props;
-    return (
-      <div className="field-group">
+    const {
+      id,
+      hint,
+      label,
+      type = 'text',
+      onChange,
+      required = false,
+      className,
+      defaultValue = ""
+    } = this.props;
+    const { mount = true } = this.state;
+    return mount ? (
+      <div className={["ui field", required ? "required" : ""].join(' ')}>
         <label htmlFor={ id }>{ label }</label>
-        <div className="field">
-          <input id={ id } 
+        <div className="ui fluid input">
+          <input id="password" name="password" style={{display: 'none'}} />
+          <input id={ id }
+            name={ id }
             type={ type }
             autoCapitalize={ type == 'email' ? 'none' : false }
             autoCorrect="off"
             onChange={ onChange }
-            placeholder={ hint } defaultValue="" />
+            placeholder={ hint } defaultValue={ defaultValue } />
         </div>
       </div>
-    );
+    ) : null;
   }
 }
 class FormMessage extends Accounts.ui.FormMessage {}
