@@ -1,6 +1,6 @@
 Package.describe({
   name: 'studiointeract:react-accounts-ui-semantic-ui',
-  version: '1.0.7',
+  version: '1.0.0',
   summary: 'Semantic UI – Accounts UI for React in Meteor 1.3',
   git: 'https://github.com/studiointeract/react-accounts-ui-semantic-ui',
   documentation: 'README.md'
