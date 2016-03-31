@@ -32,6 +32,7 @@ We support the standard [configuration in the account-ui package](http://docs.me
 ### Example setup (Meteor 1.3)
 
 `meteor add accounts-password`  
+`meteor add semantic:ui-css`  
 `meteor add studiointeract:react-accounts-ui-semantic-ui`
 
 ```javascript
@@ -53,6 +54,8 @@ if (Meteor.isClient) {
 ## Example setup using FlowRouter (Meteor 1.3)
 
 `meteor add accounts-password`  
+`meteor add semantic:ui-css`  
+`meteor add studiointeract:react-accounts-ui-semantic-ui`  
 `meteor add kadira:flow-router-ssr`
 
 ```javascript
