@@ -2,7 +2,7 @@
 
 Current version 1.0.0
 
-![React Accounts UI for Meteor 1.3 - Semantic UI](https://raw.githubusercontent.com/studiointeract/react-accounts-ui-basic/master/react-accounts-ui-semantic-ui.gif)
+![React Accounts UI for Meteor 1.3 - Semantic UI](https://raw.githubusercontent.com/studiointeract/react-accounts-ui-semantic-ui/master/react-accounts-ui-semantic-ui.gif)
 
 ## Features
 
