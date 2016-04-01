@@ -32,7 +32,7 @@ We support the standard [configuration in the account-ui package](http://docs.me
 ### Example setup (Meteor 1.3)
 
 `meteor add accounts-password`  
-`meteor add semantic:ui-css`  
+`meteor add twbs:bootstrap`  
 `meteor add std:react-accounts-ui-bootstrap`
 
 ```javascript
@@ -54,7 +54,7 @@ if (Meteor.isClient) {
 ## Example setup using FlowRouter (Meteor 1.3)
 
 `meteor add accounts-password`  
-`meteor add semantic:ui-css`  
+`meteor add twbs:bootstrap`  
 `meteor add std:react-accounts-ui-bootstrap`  
 `meteor add kadira:flow-router-ssr`
 
