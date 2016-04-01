@@ -1,8 +1,8 @@
-# React Accounts UI for Meteor 1.3 - Bootstrap
+# React Accounts UI for Meteor 1.3 - Material UI
 
 Current version 1.0.0
 
-![React Accounts UI for Meteor 1.3 - Bootstrap](https://raw.githubusercontent.com/studiointeract/react-accounts-ui-bootstrap/master/react-accounts-ui-bootstrap.gif)
+![React Accounts UI for Meteor 1.3 - Material UI](https://raw.githubusercontent.com/studiointeract/react-accounts-ui-material-ui/master/react-accounts-ui-material-ui.gif)
 
 ## Features
 
@@ -21,7 +21,7 @@ Current version 1.0.0
 
 ## Installation
 
-`meteor add std:react-accounts-ui-bootstrap`
+`meteor add std:react-accounts-ui-material-ui`
 
 ## Configuration
 
@@ -32,13 +32,13 @@ We support the standard [configuration in the account-ui package](http://docs.me
 ### Example setup (Meteor 1.3)
 
 `meteor add accounts-password`  
-`meteor add twbs:bootstrap`  
-`meteor add std:react-accounts-ui-bootstrap`
+`meteor add materialize:materialize`  
+`meteor add std:react-accounts-ui-material-ui`
 
 ```javascript
 
 import React from 'react';
-import { Accounts } from 'meteor/std:react-accounts-ui-bootstrap';
+import { Accounts } from 'meteor/std:react-accounts-ui-material-ui';
 
 Accounts.ui.config({
   passwordSignupFields: 'NO_PASSWORD',
@@ -54,14 +54,14 @@ if (Meteor.isClient) {
 ## Example setup using FlowRouter (Meteor 1.3)
 
 `meteor add accounts-password`  
-`meteor add twbs:bootstrap`  
-`meteor add std:react-accounts-ui-bootstrap`  
+`meteor add materialize:materialize`  
+`meteor add std:react-accounts-ui-material-ui`  
 `meteor add kadira:flow-router-ssr`
 
 ```javascript
 
 import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
-import { Accounts } from 'meteor/std:react-accounts-ui-bootstrap';
+import { Accounts } from 'meteor/std:react-accounts-ui-material-ui';
 import React from 'react';
 
 Accounts.ui.config({

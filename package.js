@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'std:react-accounts-ui-bootstrap',
+  name: 'std:react-accounts-ui-material-ui',
   version: '1.1.0',
-  summary: 'Bootstrap – Accounts UI for React in Meteor 1.3',
-  git: 'https://github.com/std/react-accounts-ui-bootstrap',
+  summary: 'Material UI – Accounts UI for React in Meteor 1.3',
+  git: 'https://github.com/std/react-accounts-ui-material-ui',
   documentation: 'README.md'
 });
 
