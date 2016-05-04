@@ -31,14 +31,14 @@ We support the standard [configuration in the account-ui package](http://docs.me
 
 ### Example setup (Meteor 1.3)
 
-`meteor add accounts-password`  
-`meteor add materialize:materialize`  
-`meteor add std:react-accounts-ui-material-ui`
+`meteor add accounts-password`
+`meteor add materialize:materialize`
+`meteor add std:accounts-material`
 
 ```javascript
 
 import React from 'react';
-import { Accounts } from 'meteor/std:react-accounts-ui-material-ui';
+import { Accounts } from 'meteor/std:accounts-material';
 
 Accounts.ui.config({
   passwordSignupFields: 'NO_PASSWORD',
@@ -53,15 +53,14 @@ if (Meteor.isClient) {
 
 ## Example setup using FlowRouter (Meteor 1.3)
 
-`meteor add accounts-password`  
-`meteor add materialize:materialize`  
-`meteor add std:react-accounts-ui-material-ui`  
+`meteor add accounts-password`
+`meteor add materialize:materialize`
+`meteor add std:accounts-material`
 `meteor add kadira:flow-router-ssr`
 
 ```javascript
-
 import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
-import { Accounts } from 'meteor/std:react-accounts-ui-material-ui';
+import { Accounts } from 'meteor/std:accounts-material';
 import React from 'react';
 
 Accounts.ui.config({
@@ -78,7 +77,6 @@ FlowRouter.route("/login", {
     });
   }
 });
-
 ```
 
 ## Credits
