@@ -2,7 +2,7 @@
 
 Current version 1.0.0
 
-![React Accounts UI for Meteor 1.3 - Material UI](https://raw.githubusercontent.com/studiointeract/react-accounts-ui-material-ui/master/react-accounts-ui-material-ui.gif)
+![Accounts UI for Meteor 1.3 - Material UI](https://raw.githubusercontent.com/studiointeract/accounts-material/master/accounts-material.png)
 
 ## Features
 
@@ -15,13 +15,13 @@ Current version 1.0.0
 8. **[Server Side Rendering](https://github.com/studiointeract/react-accounts-ui#server-side-rendering)** are supported, trough FlowRouter (SSR).
 9. **[Extending](https://github.com/studiointeract/react-accounts-ui#create-your-own-styled-version)** to make your own custom form, for your app, or as a package, all components can be extended and customized.
 
-### Based on and extends std:react-accounts-ui
+### Based on and extends std:accounts-ui
 
-[https://atmospherejs.com/std/react-accounts-ui](https://atmospherejs.com/std/react-accounts-ui)
+[https://github.com/studiointeract/accounts-ui](https://github.com/studiointeract/accounts-ui)
 
 ## Installation
 
-`meteor add std:react-accounts-ui-material-ui`
+`meteor add std:accounts-material`
 
 ## Configuration
 
