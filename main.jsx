@@ -58,18 +58,21 @@ class Button extends Accounts.ui.Button {
       <a style={{cursor: 'pointer'}} className={ className } onClick={ onClick }>{ label }</a>
     ) : (
       <button className={ [
-          'ui button',
-          type == 'submit' ? 'primary' : '',
+          'ui',
+          type === 'submit' ? 'btn waves-effect waves-light' : 'btn-flat',
           disabled ? 'disabled' : '',
           className
         ].join(' ') } type={ type } disabled={ disabled }
-        onClick={ onClick }>{ label }</button>
+        onClick={ onClick }>
+        { label }
+        { type == 'submit' ? <i className="material-icons right">send</i> : null }
+      </button>
     );
   }
 }
 class Fields extends Accounts.ui.Fields {
   render () {
-    let { fields = {}, className = "field" } = this.props;
+    let { fields = {}, className = "field row" } = this.props;
     return (
       <div className={ className }>
         {Object.keys(fields).map((id, i) =>
@@ -93,18 +96,17 @@ class Field extends Accounts.ui.Field {
     } = this.props;
     const { mount = true } = this.state;
     return mount ? (
-      <div className={["ui field", required ? "required" : ""].join(' ')}>
-        <label htmlFor={ id }>{ label }</label>
-        <div className="ui fluid input">
-          <input id="password" name="password" style={{display: 'none'}} />
-          <input id={ id }
-            name={ id }
-            type={ type }
-            autoCapitalize={ type == 'email' ? 'none' : false }
-            autoCorrect="off"
-            onChange={ onChange }
-            placeholder={ hint } defaultValue={ defaultValue } />
-        </div>
+      <div className={["input-field col s12 m7", required ? "required" : ""].join(' ')}>
+        <input id={ id }
+          name={ id }
+          type={ type }
+          ref={ (ref) => this.input = ref }
+          autoCapitalize={ type == 'email' ? 'none' : false }
+          autoCorrect="off"
+          onChange={ onChange }
+          className="validate"
+          placeholder={ hint } defaultValue={ defaultValue } />
+        <label htmlFor={ id } className="active">{ label }</label>
       </div>
     ) : null;
   }
