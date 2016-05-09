@@ -31,8 +31,8 @@ We support the standard [configuration in the account-ui package](http://docs.me
 
 ### Example setup (Meteor 1.3)
 
-`meteor add accounts-password`
-`meteor add materialize:materialize`
+`meteor add accounts-password`  
+`meteor add materialize:materialize`  
 `meteor add std:accounts-material`
 
 ```javascript
@@ -53,9 +53,9 @@ if (Meteor.isClient) {
 
 ## Example setup using FlowRouter (Meteor 1.3)
 
-`meteor add accounts-password`
-`meteor add materialize:materialize`
-`meteor add std:accounts-material`
+`meteor add accounts-password`  
+`meteor add materialize:materialize`  
+`meteor add std:accounts-material`  
 `meteor add kadira:flow-router-ssr`
 
 ```javascript
