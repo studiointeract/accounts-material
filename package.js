@@ -10,7 +10,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.3');
   api.use('ecmascript');
   api.use('underscore');
-  api.use('std:accounts-ui');
+  api.use('std:accounts-ui@1.2.1');
 
   api.mainModule('main.jsx');
 });
