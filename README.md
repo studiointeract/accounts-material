@@ -1,8 +1,8 @@
-# React Accounts UI for Meteor 1.3 - Material UI
+# React Accounts UI for Meteor 1.3 - Materialize
 
 Current version 1.1.0
 
-![Accounts UI for Meteor 1.3 - Material UI](https://raw.githubusercontent.com/studiointeract/accounts-material/master/accounts-material.png)
+![Accounts UI for Meteor 1.3 - Materialize](https://raw.githubusercontent.com/studiointeract/accounts-material/master/accounts-material.png)
 
 ## Features
 
