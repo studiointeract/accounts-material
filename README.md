@@ -1,3 +1,5 @@
+> This package is not maintained anymore, use [zetoff:accounts-material-ui](https://atmospherejs.com/zetoff/accounts-material-ui) instead. // T
+
 # React Accounts UI for Meteor 1.3 - Material UI
 
 Current version 1.1.0
